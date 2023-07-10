@@ -58,18 +58,35 @@ body {
   border: none;
 }
 
-.form-container input[type="submit"] {
-  background-color: #ffffff;
-  color: #ff4141;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
+.form-container input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
   cursor: pointer;
+  outline: none;
 }
 
-.form-container input[type="submit"]:hover {
-  background-color: #f4f4f4;
+.form-container input[type="radio"]:checked {
+  background-color: #ff4141;
 }
 
+.form-container input[type="radio"]::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.form-container input[type="radio"]:checked::before {
+  background-color: #ff4141;
+}
