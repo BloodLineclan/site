@@ -9,7 +9,7 @@
     <img class="header-image" src="BloodLine.png" alt="Заголовок">
 
     <div class="buttons">
-      <a href="your-clan-link" class="button">Вступить в клан</a>
+      <a href="https://vk.com/peredatimnevse" class="button">Вступить в клан</a>
       <button onclick="toggleForm()" class="button">Подать заявку на союз</button>
     </div>
 
