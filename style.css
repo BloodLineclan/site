@@ -14,6 +14,7 @@ body {
 .header-image {
   width: 100%;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .buttons {
@@ -21,22 +22,26 @@ body {
 }
 
 .button {
-  background-color: #800000;
+  background-color: #ff4141;
   color: #ffffff;
   padding: 10px 20px;
   text-decoration: none;
   margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: #8b0000;
+  background-color: #e63c3c;
 }
 
 .form-container {
   display: none;
   margin-top: 20px;
   padding: 20px;
-  background-color: #800000;
+  background-color: #ff4141;
+  border-radius: 10px;
 }
 
 .form-container label {
@@ -49,15 +54,19 @@ body {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 .form-container input[type="submit"] {
   background-color: #ffffff;
-  color: #800000;
+  color: #ff4141;
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
   border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .form-container input[type="submit"]:hover {
