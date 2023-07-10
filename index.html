@@ -5,42 +5,37 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <img class="header-image" src="BloodLine.png" alt="Заголовок">
+  <header>
+    <img src="header-image.jpg" alt="Заголовок сайта">
+  </header>
 
-    <div class="buttons">
-      <a href="https://vk.com/peredatimnevse" class="button">Вступить в клан</a>
-      <button onclick="toggleForm()" class="button">Подать заявку на союз</button>
-    </div>
+  <div class="button-container">
+    <a href="#" class="join-button">Вступить в клан</a>
+    <button class="application-button">Подать заявку на союз</button>
+  </div>
 
-    <div id="form-container" class="form-container">
-      <form action="submit.php" method="post">
-        <label for="clan">Ваш клан:</label>
-        <input type="text" name="clan" id="clan" required>
+  <div id="application-form-container" class="hidden">
+    <form action="submit.php" method="post">
+      <label for="clan-input">Ваш клан:</label>
+      <input type="text" id="clan-input" name="clan">
 
-        <label for="clan-leader">Ссылка на главу клана:</label>
-        <input type="text" name="clan-leader" id="clan-leader" required>
+      <label for="leader-input">Ссылка на главу клана:</label>
+      <input type="text" id="leader-input" name="leader">
 
-        <label for="alliance">Выберите тип союза:</label>
-        <input type="radio" name="alliance" value="Нейтралитет" required> Нейтралитет
-        <input type="radio" name="alliance" value="Союз" required> Союз
-        <br>
-        <input type="submit" value="Отправить">
-      </form>
-    </div>
+      <div>
+        <span>Выберите статус:</span>
+        <label for="neutral-radio">
+          <input type="radio" id="neutral-radio" name="status" value="Нейтралитет" checked> Нейтралитет
+        </label>
+        <label for="alliance-radio">
+          <input type="radio" id="alliance-radio" name="status" value="Союз"> Союз
+        </label>
+      </div>
+
+      <input type="submit" value="Отправить">
+    </form>
   </div>
 
   <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <script>
-    
-    $(document).ready(function() {
-      $('.form-container form').submit(function(event) {
-        event.preventDefault();
-        $('.form-container').hide(); 
-      });
-    });
-  </script>
 </body>
 </html>
