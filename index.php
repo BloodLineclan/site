@@ -6,7 +6,7 @@
 </head>
 <body>
   <div class="container">
-    <img class="header-image" src="/path/to/header-image.jpg" alt="Заголовок">
+    <img class="header-image" src="BloodLine.png" alt="Заголовок">
 
     <div class="buttons">
       <a href="your-clan-link" class="button">Вступить в клан</a>
