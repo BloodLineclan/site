@@ -1,8 +1,7 @@
-function toggleForm() {
-  var formContainer = document.getElementById("form-container");
-  if (formContainer.style.display === "none") {
-    formContainer.style.display = "block";
-  } else {
-    formContainer.style.display = "none";
-  }
-}
+document.querySelector('.join-button').addEventListener('click', function() {
+  window.location.href = 'https://example.com'; // Замените ссылку на вашу реальную ссылку
+});
+
+document.querySelector('.application-button').addEventListener('click', function() {
+  document.getElementById('application-form-container').classList.remove('hidden');
+});
