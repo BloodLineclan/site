@@ -31,6 +31,7 @@ body {
   border: none;
   cursor: pointer;
   width: 200px;
+  height: 50px; 
 }
 
 .button:hover {
@@ -61,22 +62,6 @@ body {
   border: none;
 }
 
-.form-container input[type="submit"] {
-  background-color: #ff4141;
-  color: #ffffff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 200px;
-}
-
-.form-container input[type="submit"]:hover {
-  background-color: #e63c3c;
-}
-
 .form-container input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -101,7 +86,7 @@ body {
   width: 10px;
   height: 10px;
   margin: 4px;
-  background-color: transparent;
+  background-color: white; 
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
