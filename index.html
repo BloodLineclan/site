@@ -368,8 +368,8 @@
         }
         .Button_icon__6B5tJ {
     margin-right: 8px; 
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 .Callout_root__3pu6A {
     background: #212a33;
@@ -379,13 +379,45 @@
     line-height: 20px;
     padding: 10px 14px
 }
+.modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            background: var(--bg-color);
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+        .close-button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
     </style>
 </head>
 <body>
     <div id="root">
         <div class="header">
             <div style="text-align: center; margin-bottom: 20px;">
-                <img src="./123.png" alt="Описание изображения" style="width: auto; height: 30vh; object-fit: contain;"/>
+                <img src="C:\Users\alex_\Downloads\123.png" alt="Описание изображения" style="width: auto; height: 30vh; object-fit: contain;"/>
             </div>
             <div class="Header_hashTags__xExO9">
                 <span>#GDEPREPOD</span>
@@ -402,7 +434,7 @@
                         <div class="Progress_barThumb__Pyhw3" style="width: 34.94%;"></div>
                     </div><div class="Progress_captions__eTxDt">
                         
-                </div><div class="Progress_captions__eTxDt"><div style="margin-left: 4%;"><div class="Progress_itemTitle__sZTgw">432</div><div class="Progress_itemSubtitle__zwp-1">Подписи</div></div>
+                </div><div class="Progress_captions__eTxDt"><div style="margin-left: 5%;"><div class="Progress_itemTitle__sZTgw">432</div><div class="Progress_itemSubtitle__zwp-1">Подписи</div></div>
                         <div class="Progress_itemRight__FTam-"><div class="Progress_itemTitle__sZTgw">1,000</div><div class="Progress_itemSubtitle__zwp-1">Следующая цель</div></div>
                     </div>
                     
@@ -422,6 +454,8 @@
             <h6>
 
             </h6>
+            <button class="Button_root__ITRr0 Button_rootSecondary__S23Z7" id="openModalButton">Потдержать проект</button>
+
             <div class="Callout_root__3pu6A">Илон Маск, Виталик Бутерин и многие другие уже выразили свою поддержку за последние несколько дней.</div>
         </section>
 
@@ -439,6 +473,26 @@
         </section>
 
     </div>
+    <div class="modal" id="modal">
+            <div class="modal-content" style="background-color: #1A2026;">
+                <img src="qr.png" alt="QR Code" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const openModalButton = document.getElementById('openModalButton');
+        const closeModalButton = document.getElementById('closeModalButton');
+        openModalButton.addEventListener('click', function() {
+            modal.style.display = 'flex';
+        });
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
