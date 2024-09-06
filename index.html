@@ -1,41 +1,444 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Мой сайт</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Digital Resistance</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/loader.css">
+    <link rel="stylesheet" href="/important.css">
+    <link href="/static/css/main.01c53421.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1A2026;
+            --font-family: -apple-system, "SF Pro Text", "SF Pro", system-ui, "Roboto", sans-serif;
+            --font-family-alt: 'Product Sans', system-ui, "Roboto", sans-serif;
+            --first_layer: ease;
+            --swiper-theme-color: #007aff;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        html,
+        body {
+            max-width: 100vw;
+            user-select: none;
+        }
+
+        * {
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            background: var(--bg-color);
+            padding-right: var(--scrollbar-width, 0);
+            font-family: var(--font-family);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .Section_root__yZ8fc {
+            font-size: 16px;
+            letter-spacing: -.31px;
+            line-height: 24px;
+            padding-top: 36px;
+        }
+
+        .Section_title__8VvaU {
+            color: #fff;
+            font-family: var(--font-family-alt);
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -.23px;
+            line-height: 24px;
+            margin-bottom: 8px;
+        }
+
+        .ExternalLink_root__0rvpQ {
+            color: #4db2ff;
+        }
+
+        .Wall_title__DxQlp {
+            margin-bottom: 15px;
+        }
+
+        .Wall_content__VOjVq {
+            padding-top: 7px;
+        }
+
+        .Wall_quote__TSEvt {
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .Wall_quote__TSEvt + .Wall_quote__TSEvt {
+            margin-top: 18px;
+        }
+
+        .Wall_quoteTop__RvsPY {
+            align-items: flex-end;
+            display: flex;
+            gap: 6px;
+        }
+
+        .Wall_quoteImage__MySxK {
+            border-radius: 50%;
+            height: 38px;
+            width: 38px;
+        }
+
+        .Wall_quoteMessage__xTQMB {
+            background: #2b3742;
+            border-radius: 17px;
+            padding: 6px 10px;
+        }
+
+        .Wall_quoteAuthor__LVD4T {
+            color: #4db2ff;
+            font-size: 14px;
+            font-weight: 590;
+            letter-spacing: -.15px;
+        }
+
+        .Wall_quoteText__3jW81 {
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: -.31px;
+            line-height: 22px;
+        }
+
+        .Wall_quoteText__3jW81 * + * {
+            margin-top: 16px;
+        }
+
+        .Wall_quoteDate__Y0rwP {
+            color: #8794a1;
+            font-size: 13px;
+            letter-spacing: -.08px;
+            line-height: 18px;
+            padding-left: 57px;
+            padding-top: 5px;
+        }
+
+        .Progress_root__BdFFO {
+            padding-top: 0;
+        }
+
+        .Progress_bar__LUyKB {
+            background: #212a33;
+            border-radius: 4px;
+            height: 8px;
+            overflow: hidden;
+        }
+
+        .Progress_barThumb__Pyhw3 {
+            background: #219cfb;
+            height: 100%;
+            min-width: 4px;
+        }
+
+        .Progress_captions__eTxDt {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+
+        .Progress_itemTitle__sZTgw {
+            font-family: var(--font-family-alt);
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -.26px;
+            line-height: 28px;
+            margin-bottom: 2px;
+        }
+
+        .Progress_itemSubtitle__zwp-1 {
+            font-size: 15px;
+            letter-spacing: -.23px;
+            line-height: 20px;
+        }
+
+        .Progress_itemRight__FTam- {
+            color: #8794a1;
+            text-align: right;
+            margin-right: 5%;
+        }
+
+        .Button_root__ITRr0 {
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            align-items: center;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            font-family: var(--font-family);
+            font-size: 17px;
+            font-weight: 600;
+            gap: 6px;
+            justify-content: center;
+            letter-spacing: -.43px;
+            line-height: 22px;
+            margin-bottom: 8px;
+            padding: 14px;
+            position: relative;
+            transition: transform .2s var(--first_layer), filter .2s var(--first_layer);
+            -webkit-user-select: none;
+            user-select: none;
+            width: 100%;
+        }
+
+        .Button_rootPrimary__N7Bpy {
+            background: #248bda;
+            color: #fff;
+        }
+
+        .Button_rootSecondary__S23Z7 {
+            background: #212a33;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .Button_root__ITRr0:active {
+            transform: scale(.98);
+        }
+
+        .Callout_root__3pu6A {
+            background: #212a33;
+            border-radius: 10px;
+            color: #8794a1;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 10px 14px;
+        }
+
+        .Sign_spinner__D6Xj- {
+            height: 17px;
+            position: absolute;
+            right: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 17px;
+        }
+
+        .Sign_spinnerThumb__AT4QQ {
+            animation: Sign_rotation__zNbCT 1s infinite var(--first_layer);
+            border: 2px solid #fff;
+            border-radius: 50%;
+            border-top-color: #248bda;
+            display: block;
+            height: 100%;
+            margin: auto;
+            width: 100%;
+        }
+
+        @keyframes Sign_rotation__zNbCT {
+            0% { transform: rotate(0deg); }
+            to { transform: rotate(359deg); }
+        }
+
+        .Media_items__PVRkO {
+            border-radius: 10px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+
+        .Media_item__EdThw {
+            align-items: center;
+            background: #212a33;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 11px 17px;
+        }
+
+        .Media_item__EdThw + .Media_item__EdThw {
+            position: relative;
+        }
+
+        .Media_item__EdThw + .Media_item__EdThw:before {
+            background: #000;
+            content: "";
+            display: block;
+            height: .33px;
+            left: 17px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .Media_itemArrow__FaaS1 {
+            color: #8794a1;
+        }
+
+        Header_title__\+9guG {
+    color: #fff;
+    font-family: var(--font-family-alt);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    padding: 8px 0 34px;
+    text-align: center;
+}
+
+        .IndexPage_root__dLGqo {
+            -ms-overflow-style: none;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 0 20px 18px;
+            scrollbar-width: none;
+        }
+
+        .IndexPage_root__dLGqo::-webkit-scrollbar {
+            display: none;
+        }
+
+        .swiper {
+            display: block;
+            list-style: none;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .swiper-vertical > .swiper-wrapper {
+            flex-direction: column;
+        }
+
+        .swiper-wrapper {
+            box-sizing: initial;
+            display: flex;
+            height: 100%;
+            position: relative;
+            transition-property: transform;
+            transition-timing-function: ease;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .Header_hashTags__xExO9 {
+    align-items: center;
+    color: #8794a1;
+    display: flex;
+    font-size: 15px;
+    font-weight: 590;
+    gap: 20px;
+    justify-content: center;
+    letter-spacing: -.23;
+    line-height: 20px
+}
+
+        .swiper-slide {
+            display: block;
+            flex-shrink: 0;
+            height: 100%;
+            position: relative;
+            transition-property: transform;
+            width: 100%;
+        }
+        .Progress_itemRight__FTam- {
+    color: #8794a1;
+    text-align: right
+}
+        @font-face {
+            font-family: 'Product Sans';
+            font-weight: bold;
+            src: url('../../public/fonts/ProductSans-Bold/ProductSans-Bold.woff2') format('woff2'),
+                 url('../../public/fonts/ProductSans-Bold/ProductSans-Bold.woff') format('woff');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Product Sans';
+            font-weight: normal;
+            src: url('../../public/fonts/ProductSans-Regular/ProductSans-Regular.woff2') format('woff2'),
+                 url('../../public/fonts/ProductSans-Regular/ProductSans-Regular.woff') format('woff');
+            font-display: swap;
+        }
+        .Button_icon__6B5tJ {
+    margin-right: 8px; 
+    display: flex; 
+    align-items: center; 
+}
+.Callout_root__3pu6A {
+    background: #212a33;
+    border-radius: 10px;
+    color: #8794a1;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 10px 14px
+}
+    </style>
 </head>
 <body>
-  <header>
-    <img src="BloodLine.png" alt="Заголовок сайта">
-  </header>
+    <div id="root">
+        <div class="header">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="C:\Users\alex_\Downloads\123.png" alt="Описание изображения" style="width: auto; height: 30vh; object-fit: contain;"/>
+            </div>
+            <div class="Header_hashTags__xExO9">
+                <span>#GDEPREPOD</span>
+                <span>#FreeHripok</span>
+            </div>
+            <h1 class="Header_title__\+9guG" style="margin-left: 25%;">GDE PREPOD?</h1>
 
-  <div class="button-container">
-    <a href="https://vk.com/peredatimnevse" class="join-button">Вступить в клан</a>
-    <button class="application-button">Подать заявку на союз</button>
-  </div>
+        </div>
 
-  <div id="application-form-container" class="hidden">
-    <form action="submit.php" method="post">
-      <label for="clan-input">Ваш клан:</label>
-      <input type="text" id="clan-input" name="clan">
+        <section class="Section_root__yZ8fc">
+            <div class="Progress_root__BdFFO">
+                <div class="Progress_root__BdFFO">
+                    <div class="Progress_bar__LUyKB">
+                        <div class="Progress_barThumb__Pyhw3" style="width: 34.94%;"></div>
+                    </div><div class="Progress_captions__eTxDt">
+                        
+                </div><div class="Progress_captions__eTxDt"><div style="margin-left: 4%;"><div class="Progress_itemTitle__sZTgw">432</div><div class="Progress_itemSubtitle__zwp-1">Подписи</div></div>
+                        <div class="Progress_itemRight__FTam-"><div class="Progress_itemTitle__sZTgw">1,000</div><div class="Progress_itemSubtitle__zwp-1">Следующая цель</div></div>
+                    </div>
+                    
+            </div>
+            </div>
+        </section>
+        <br><br>
+        <section>
+            <button class="Button_root__ITRr0 Button_rootPrimary__N7Bpy">
+                <span class="Button_icon__6B5tJ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" fill="none">
+                        <path fill="currentColor" d="M8.659 23.039q-1.261 0-1.918-.714-.647-.705-.647-1.868 0-.989.506-2.133.507-1.146 1.428-2.258a11.7 11.7 0 0 1 2.191-2.025 11.2 11.2 0 0 1 2.823-1.47 9.7 9.7 0 0 1 3.27-.548q.88 0 1.386.415.515.408.515 1.13 0 .256-.067.506-.058.24-.124.44-.066.199-.066.323 0 .125.116.125.157 0 .481-.257.323-.266.764-.648.44-.39.93-.78.498-.39 1.004-.648.506-.265.946-.265.54 0 .805.274.274.274.382.68.117.398.166.806.058.406.141.68.083.266.316.266a.74.74 0 0 0 .357-.1.77.77 0 0 1 .398-.108.6.6 0 0 1 .49.224q.19.225.19.523 0 .24-.115.424a.9.9 0 0 1-.29.298q-.275.183-.607.266a2.6 2.6 0 0 1-.622.083q-.623 0-.972-.249a1.5 1.5 0 0 1-.506-.63 3.5 3.5 0 0 1-.224-.748 8 8 0 0 0-.133-.622q-.058-.258-.216-.258-.182 0-.523.29-.34.283-.797.706-.456.416-.979.839a6 6 0 0 1-1.08.705 2.3 2.3 0 0 1-1.07.283q-.531 0-.872-.307-.34-.308-.34-.83 0-.382.1-.706.1-.333.199-.631.1-.307.1-.648 0-.265-.357-.265-1.412 0-2.682.465-1.26.464-2.307 1.22a10.6 10.6 0 0 0-1.801 1.643 8.4 8.4 0 0 0-1.18 1.76q-.414.872-.414 1.553 0 .54.274.863.273.332.822.332.88 0 1.618-.648.747-.639 1.295-1.793.556-1.145.864-2.664.306-1.527.307-3.279 0-1.486-.29-2.772-.292-1.287-.823-2.258t-1.278-1.52a2.73 2.73 0 0 0-1.652-.547q-.69 0-1.228.357-.54.348-.847.954a3 3 0 0 0-.307 1.378q0 1.238.498 2.283a7.5 7.5 0 0 0 1.262 1.876 11.3 11.3 0 0 0 1.602 1.436q.83.598 1.502.963.225.132.316.307.1.166.1.357 0 .291-.225.498a.73.73 0 0 1-.515.2.9.9 0 0 1-.415-.1 12 12 0 0 1-1.618-.971 12 12 0 0 1-1.553-1.304 10.5 10.5 0 0 1-1.311-1.602 8 8 0 0 1-.905-1.86 6.5 6.5 0 0 1-.332-2.074q0-1.23.515-2.2a3.9 3.9 0 0 1 1.41-1.527q.897-.565 2.051-.565 1.27 0 2.3.664 1.037.664 1.784 1.851.747 1.188 1.146 2.773.398 1.577.398 3.403 0 2.15-.407 3.968-.398 1.818-1.162 3.162-.764 1.354-1.85 2.1a4.2 4.2 0 0 1-2.441.748M.98 19.926q-.315 0-.54-.24a.76.76 0 0 1-.223-.549q0-.306.224-.54a.72.72 0 0 1 .54-.232h24.022q.323 0 .548.224.224.233.224.548t-.224.548a.72.72 0 0 1-.548.24zm-.348-3.204a.614.614 0 0 1 0-.888l2.839-2.831a.6.6 0 0 1 .44-.183.56.56 0 0 1 .44.183.614.614 0 0 1 0 .888l-2.84 2.83a.63.63 0 0 1-.44.192.59.59 0 0 1-.44-.191m2.839 0-2.84-2.83a.59.59 0 0 1-.19-.44q0-.266.19-.45a.59.59 0 0 1 .44-.19q.258 0 .44.19l2.84 2.823q.19.192.19.448a.61.61 0 0 1-.19.449.59.59 0 0 1-.44.19.59.59 0 0 1-.44-.19"></path>
+                    </svg>
+                </span>
+                Подписать это письмо
+            </button>
+            <h6>
 
-      <label for="leader-input">Ссылка на главу клана:</label>
-      <input type="text" id="leader-input" name="leader">
+            </h6>
+            <div class="Callout_root__3pu6A">Илон Маск, Виталик Бутерин и многие другие уже выразили свою поддержку за последние несколько дней.</div>
+        </section>
 
-      <div>
-        <span>Выберите статус:</span>
-        <label for="neutral-radio">
-          <input type="radio" id="neutral-radio" name="status" value="Нейтралитет" checked> Нейтралитет
-        </label>
-        <label for="alliance-radio">
-          <input type="radio" id="alliance-radio" name="status" value="Союз"> Союз
-        </label>
-      </div>
-      <br>
-      <input type="submit" value="Отправить">
-    </form>
-  </div>
+        <section>
+            <h2 class="Section_title__8VvaU">Открытое письмо</h2>
+            <p class="Letter_root__NNxNQ">Дорогие участники <a class="ExternalLink_root__0rvpQ"><strong>#GDEPREPOD</strong></a>, благодарим всех за вашу поддержку...<br>Is anyone even reading this? Well, in general, the programmer from the word chat gpt will soon go to the store for flash drives, sign this letter. those who have read this treatise, send it to five friends and luck will follow you for many years</p>
+            <p><a href="#" class="ExternalLink_root__0rvpQ"><strong>Прочитайте полный текст Открытого письма.</strong></a></p>
+        </section>
 
-  <script src="script.js"></script>
+        <section>
+            <h2 class="Section_title__8VvaU">Дверь Хрипков</h2>
+            <div class="Wall_content__VOjVq">
+                <p class="Wall_quote__TSEvt">#GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  #GDEPREPOD  </p>
+            </div>
+        </section>
+
+    </div>
+
 </body>
 </html>
